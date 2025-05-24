@@ -1,11 +1,7 @@
 class Player {
   final String name;
-  final int points;
-  final String position;
+  int points;
+  double valuation;
 
-  Player({
-    required this.name,
-    required this.points,
-    required this.position,
-  });
+  Player({required this.name, this.points = 0, this.valuation = 0.0});
 }
