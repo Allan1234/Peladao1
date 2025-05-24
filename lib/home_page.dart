@@ -1,4 +1,6 @@
+
 import 'package:flutter/material.dart';
+import 'footer_widget.dart';
 
 class HomePage extends StatelessWidget {
   @override
@@ -7,8 +9,15 @@ class HomePage extends StatelessWidget {
       appBar: AppBar(
         title: Text('Peladão - Home'),
       ),
-      body: Center(
-        child: Text('Bem-vindo ao Peladão!'),
+      body: Column(
+        children: [
+          Expanded(
+            child: Center(
+              child: Text('Bem-vindo ao Peladão!'),
+            ),
+          ),
+          FooterWidget(),
+        ],
       ),
     );
   }
