@@ -14,9 +14,9 @@ dependencies:
 dev_dependencies:
   flutter_test:
     sdk: flutter
+  flutter_native_splash: ^2.3.2
 
 flutter:
   uses-material-design: true
-
   assets:
     - assets/images/file_000000006c3461f5aace65f6c2d693b2.png
