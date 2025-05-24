@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'footer_widget.dart';
 
 class TeamSelectionPage extends StatelessWidget {
   final List<String> availablePlayers = [
@@ -11,19 +12,26 @@ class TeamSelectionPage extends StatelessWidget {
       appBar: AppBar(
         title: Text('Selecionar Time'),
       ),
-      body: ListView.builder(
-        itemCount: availablePlayers.length,
-        itemBuilder: (context, index) {
-          return ListTile(
-            title: Text(availablePlayers[index]),
-            trailing: ElevatedButton(
-              onPressed: () {
-                print('Selecionado: ${availablePlayers[index]}');
+      body: Column(
+        children: [
+          Expanded(
+            child: ListView.builder(
+              itemCount: availablePlayers.length,
+              itemBuilder: (context, index) {
+                return ListTile(
+                  title: Text(availablePlayers[index]),
+                  trailing: ElevatedButton(
+                    onPressed: () {
+                      print('Selecionado: ${availablePlayers[index]}');
+                    },
+                    child: Text('Selecionar'),
+                  ),
+                );
               },
-              child: Text('Selecionar'),
             ),
-          );
-        },
+          ),
+          FooterWidget(),
+        ],
       ),
     );
   }
